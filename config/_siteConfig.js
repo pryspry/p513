@@ -9,8 +9,8 @@ import theCMS from '../cms/netlify/cms'
  * General Site configurations
  */
 export default {
-  siteName: 'Awake',
-  tagline: 'A Nuxt.js Theme for Netlify CMS',
+  siteName: 'PARTAI SOSIALIS PAPUA',
+  tagline: 'Rebut Nasional Demokratik, Wujudkan Sosialisme',
   featureImage: '/uploads/home-hero.jpg',
   logo: 'logo-component', // 'logo-component', // or '/logo.svg' for regular image
   googleAnalytics: {
@@ -19,26 +19,32 @@ export default {
   },
   mainMenu: [
     {
-      name: 'About',
-      link: '/about'
+      name: 'Home',
+      link: '/'
     },
     {
-      name: 'Contact',
-      link: '/contact'
+      name: 'Teori',
+      link: '/teori'
     },
     {
-      name: 'Categories',
-      link: '/categories'
+      name: 'Analisa',
+      link: '/analisa'
     },
     {
-      name: 'Github Repo',
-      link: 'https://github.com/danielkellyio/awake-template',
-      target: '_blank'
+      name: 'Sikap',
+      link: '/sikap'
     },
     {
-      name: 'Awake+ Premium',
-      link: 'https://awake-premium-lp.netlify.com/',
-      target: '_blank'
+      name: 'Solidaritas',
+      link: '/solidaritas'
+    },
+    {
+      name: 'Tentang Kami',
+      link: '/tentang'
+    },
+    {
+      name: 'Kontak',
+      link: '/kontak'
     }
   ],
   hero: {

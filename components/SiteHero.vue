@@ -1,26 +1,22 @@
 <template>
-  <section :class="`hero is-medium hero-theme-${computedTheme}`">
-    <img
-      class="hero-bg-img"
-      :src="responsiveImage.src"
-      :lazy="false"
-      :srcset="responsiveImage.srcSet"
-    />
+  <section class="hero is-small">
     <div class="hero-body">
       <div class="container">
-        <h1 class="title animated fadeInUp">
-          {{ title }}
-        </h1>
-        <h2 class="subtitle animated fadeInUp slower">
-          {{ subtitle }}
-        </h2>
-        <br />
+        <router-link to="/">
+          <h1 class="title ">
+            Partai Sosialis Papua
+          </h1>
+          <h2 class="subtitle">
+            Rebut Nasional Demokratik, Wujudkan Sosialisme
+          </h2>
+        </router-link>
+        <!-- <br />
         <div
           v-if="$slots.default"
           class="under-subtitle animated fadeInDown slower"
         >
           <slot />
-        </div>
+        </div>-->
       </div>
     </div>
   </section>
@@ -54,19 +50,21 @@ export default {
 
 <style lang="scss" scoped>
 .hero {
-  margin-top: 52px;
-  background-size: cover !important;
-  background-position: center;
+  margin-top: 0px;
+  padding: 10px;
   text-align: center;
   overflow: hidden;
   position: relative;
+  background-color: #e60013;
+  color: #fff;
 }
-
 .title {
-  font-weight: 300;
+  text-transform: uppercase;
+  font-weight: 900;
   @media (min-width: 768px) {
     font-size: 3.2rem;
   }
+  color: $yellow;
 }
 .subtitle,
 .under-subtitle {
@@ -74,8 +72,10 @@ export default {
   margin: 0;
 }
 .subtitle {
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin-bottom: 0 !important;
+  font-weight: 600;
+  color: #1d1d1d;
 }
 .under-subtitle {
   display: inline-block;

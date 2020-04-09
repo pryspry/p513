@@ -1,11 +1,11 @@
 <template>
   <nav
-    class="navbar has-shadow is-fixed-top"
+    class="navbar has-shadow is-normal psp_navbararea"
     role="navigation"
     aria-label="main navigation"
   >
     <div class="navbar-brand">
-      <nuxt-link class="navbar-item" to="/">
+      <!-- <nuxt-link class="navbar-item" to="/">
         <site-logo v-if="$siteConfig.logo === 'logo-component'" />
         <img
           v-else
@@ -13,7 +13,7 @@
           :alt="$siteConfig.siteName"
           class="logo"
         />
-      </nuxt-link>
+      </nuxt-link> -->
       <hamburger-button @click="active = !active" />
     </div>
 
@@ -23,7 +23,7 @@
         'is-active': active
       }"
     >
-      <ul class="navbar-end">
+      <ul class="navbar">
         <li
           v-for="item in $siteConfig.mainMenu"
           :key="item.link"
@@ -72,8 +72,19 @@ export default {
 .navbar-burger {
   height: auto;
 }
-
 .navbar-menu a {
   display: block;
+  color: #efefef;
+}
+.psp_navbararea {
+  background: #111111;
+}
+.psp_navbararea .navbar {
+  width: 600px;
+  margin: 0 auto 0;
+  background-color: #111;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 </style>

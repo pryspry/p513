@@ -1,16 +1,26 @@
 <template>
   <div id="home-page" class="page-wrapper home-page">
     <site-hero :title="title" :subtitle="subtitle" :image="featureImage">
-      <button
+      <!-- <button
         class="button is-primary"
         @click="$eventBus.$emit('modal-triggered', 'newsletter-modal')"
       >
         Subscribe To Newsletter
-      </button>
+      </button>-->
     </site-hero>
+    <div>
+      <site-nav />
+    </div>
+    <!-- <div class="container">
+      <div class="columns">
+        <div class="column is-two-thirds">
+          <posts-grid />
+        </div>
+        <div class="column">Popular</div>
+      </div>
+    </div> -->
     <main-section theme="one-column">
       <template v-slot:default>
-        <!-- All Posts -->
         <posts-grid />
       </template>
       <template v-slot:sidebar>
